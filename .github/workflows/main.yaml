@@ -26,10 +26,13 @@ jobs:
       attestations: write
       id-token: write
     strategy:
-      fail-fast: false
+      fail-fast: true
       matrix:
         image:
           - ubuntu-2204-lts
+        gap-build:
+          - full
+          - slim
         gap-version:
           - 4.13.1
           - 4.13.0
@@ -85,4 +88,5 @@ jobs:
           cache-to: type=gha,mode=max`
           build-args: |
             PLATFORM=${{ matrix.platform }}
+            GAP_BUILD=${{ matrix.gap-build }}
             GAP_VERSION=${{ matrix.gap-version }}
