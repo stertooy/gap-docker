@@ -3,7 +3,7 @@ name: Docker - build and publish image
 on:
   workflow_call:
     inputs:
-      GAP_VERSION:
+      gap_version:
         required: true
         type: string
       GAP_BUILD:
