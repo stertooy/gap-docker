@@ -27,7 +27,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        image:
+        operating-system-base:
           - ubuntu-2204-lts
         gap-build:
           - bare
