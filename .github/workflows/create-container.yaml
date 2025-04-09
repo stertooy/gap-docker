@@ -67,4 +67,4 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max`
           build-args: |
-            GAP_VERSION=${{ inputs.GAP_VERSION }}
+            GAP_VERSION=${{ inputs.gap_version }}
