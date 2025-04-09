@@ -1,0 +1,5 @@
+ca-certificates
+curl
+libgmp10
+netbase
+zlib1g
