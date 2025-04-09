@@ -9,7 +9,7 @@ on:
       GAP_BUILD:
         required: true
         type: string
-      GAP_BASE:
+      OPERATING_SYSTEM_BASE:
         required: true
         type: string
 
@@ -57,8 +57,8 @@ jobs:
       - name: 🐬 docker -- build and push
         uses: docker/build-push-action@v6
         with:
-          context: ./src/dockerfiles/${{ inputs.GAP_BASE }}
-          file: ./src/dockerfiles/${{ inputs.GAP_BASE }}/Dockerfile
+          context: ./src/dockerfiles/${{ inputs.OPERATING_SYSTEM_BASE }}
+          file: ./src/dockerfiles/${{ inputs.OPERATING_SYSTEM_BASE }}/Dockerfile
           push: ${{ github.ref == 'refs/heads/main' && github.event_name == 'push' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
