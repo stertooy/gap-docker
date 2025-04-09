@@ -37,6 +37,6 @@ jobs:
           - 4.13.1
     uses: ./.github/workflows/create-container.yaml
     with:
-      GAP_VERSION: ${{ matrix.gap-version }}
-      GAP_BUILD: ${{ matrix.gap-build }}
-      OPERATING_SYSTEM_BASE: ${{ matrix.operating-system-base }}
+      gap_version: ${{ matrix.gap-version }}
+      gap_build: ${{ matrix.gap-build }}
+      operating_system_base: ${{ matrix.operating-system-base }}
