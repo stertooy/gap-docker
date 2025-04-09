@@ -1,0 +1,6 @@
+autoconf
+build-essential
+libgmp-dev
+libtool
+wget
+zlib1g-dev
