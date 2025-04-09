@@ -9,7 +9,7 @@ on:
       GAP_BUILD:
         required: true
         type: string
-      OPERATING_SYSTEM_BASE:
+      operating_system_base:
         required: true
         type: string
 
