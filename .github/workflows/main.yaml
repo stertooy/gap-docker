@@ -19,7 +19,6 @@ on:
 
 jobs:
   docker-image-build:
-    runs-on: ubuntu-latest
     permissions:
       contents: read
       packages: write
@@ -36,12 +35,8 @@ jobs:
         gap-version:
           - 4.14.0
           - 4.13.1
-    steps:
-      - name: "Checkout"
-        uses: actions/checkout@v4
-      - name: "Build docker image"
-        uses: ./.github/workflows/create-container.yaml@main
-        with:
-          GAP_VERSION: ${{ matrix.gap-version }}
-          GAP_BUILD: ${{ matrix.gap-build }}
-          GAP_BASE: ${{ matrix.image }}
+    uses: ./.github/workflows/create-container.yaml
+    with:
+      GAP_VERSION: ${{ matrix.gap-version }}
+      GAP_BUILD: ${{ matrix.gap-build }}
+      GAP_BASE: ${{ matrix.image }}
