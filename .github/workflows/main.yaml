@@ -39,4 +39,4 @@ jobs:
     with:
       GAP_VERSION: ${{ matrix.gap-version }}
       GAP_BUILD: ${{ matrix.gap-build }}
-      GAP_BASE: ${{ matrix.image }}
+      OPERATING_SYSTEM_BASE: ${{ matrix.operating-system-base }}
