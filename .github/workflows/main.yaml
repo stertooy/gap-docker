@@ -37,6 +37,6 @@ jobs:
           - 4.13.1
     uses: ./.github/workflows/worflow-dispatch-build.yaml
     with:
-      gap_version: ${{ matrix.gap-version }}
-      gap_build: ${{ matrix.gap-build }}
-      operating_system_base: ${{ matrix.operating-system-base }}
+      gap-version: ${{ matrix.gap-version }}
+      gap-build: ${{ matrix.gap-build }}
+      operating-system-base: ${{ matrix.operating-system-base }}
