@@ -40,7 +40,7 @@ jobs:
       - name: "Checkout"
         uses: actions/checkout@v4
       - name: "Build docker image"
-        uses: ./.github/workflows/create-container.yaml
+        uses: ./.github/workflows/create-container.yaml@main
         with:
           GAP_VERSION: ${{ matrix.gap-version }}
           GAP_BUILD: ${{ matrix.gap-build }}
