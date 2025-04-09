@@ -1,4 +1,4 @@
-name: Publish GAP Docker image
+name: Docker - build and publish image
 
 on:
   workflow_call:
