@@ -6,7 +6,7 @@ on:
       gap_version:
         required: true
         type: string
-      GAP_BUILD:
+      gap_build:
         required: true
         type: string
       operating_system_base:
